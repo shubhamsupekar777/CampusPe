@@ -8,12 +8,7 @@ import {
   FileType,
 } from 'lucide-react';
 
-/**
- * CampusPe resume-upload landing-page section.
- * Requires Tailwind CSS and lucide-react.
- * The file picker validates PDF, DOC, and DOCX files up to 10 MB.
- * Connect onResumeSelected to your upload/API flow when ready.
- */
+
 export default function ResumeUploadSection({ onResumeSelected }) {
   const fileInputRef = useRef(null);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -100,7 +95,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
 
   return (
     <section className="relative isolate overflow-hidden bg-[#f7f9fc] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[50px]">
-      {/* Soft background glows from the reference design */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
@@ -111,7 +105,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
       </div>
 
       <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center text-center">
-        {/* Eyebrow */}
         <div className="inline-flex h-[29px] items-center gap-2 rounded-full border border-indigo-100 bg-white/90 px-3.5 shadow-[0_3px_12px_rgba(72,93,180,0.08)]">
           <span className="h-2 w-2 rounded-full bg-[#8878ff] shadow-[0_0_0_4px_rgba(136,120,255,0.10)]" />
           <span className="text-[12px] font-bold tracking-[0.02em] text-[#0785ff]">
@@ -121,7 +114,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
           <span className="text-[12px] font-medium text-slate-400">v2.4 AI Engine</span>
         </div>
 
-        {/* Heading and intro */}
         <h2 className="mt-3.5 text-[32px] font-extrabold leading-[1.16] tracking-[-0.035em] text-[#101522] sm:text-[38px] md:text-[40px]">
           Upload your resume.
           <span className="block text-[#087fff]">Find jobs that fit.</span>
@@ -131,9 +123,7 @@ export default function ResumeUploadSection({ onResumeSelected }) {
           <br className="hidden sm:block" /> then finds relevant jobs across 1,000+ sources.
         </p>
 
-        {/* Upload card and floating feature badges */}
         <div className="relative mt-7 w-full max-w-[532px] sm:mt-7">
-          {/* Match-rate badge */}
           <div className="absolute -left-[60px] top-[36px] z-10 hidden items-center gap-2.5 rounded-2xl border border-white/80 bg-white/95 px-3.5 py-2.5 text-left shadow-[0_12px_30px_rgba(42,65,115,0.10)] sm:flex md:-left-[60px]">
             <span className="flex h-[30px] w-[30px] items-center justify-center rounded-[10px] border border-lime-200 bg-lime-50 text-lime-600">
               <Zap size={15} fill="currentColor" strokeWidth={1.8} />
@@ -148,7 +138,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
             </span>
           </div>
 
-          {/* Main upload surface */}
           <div className="rounded-[30px] border border-white/90 bg-white/80 p-4 shadow-[0_18px_55px_rgba(83,92,170,0.18)] sm:p-[22px]">
             <div
               onDragEnter={(event) => {
@@ -168,7 +157,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
                   : 'border-[#d3dcff] bg-white/45'
               }`}
             >
-              {/* Decorative corner marks */}
               <span aria-hidden="true" className="absolute left-[7px] top-[7px] h-[10px] w-[10px] rounded-tl border-l-2 border-t-2 border-[#c8d3ff]" />
               <span aria-hidden="true" className="absolute right-[7px] top-[7px] h-[10px] w-[10px] rounded-tr border-r-2 border-t-2 border-[#c8d3ff]" />
               <span aria-hidden="true" className="absolute bottom-[7px] left-[7px] h-[10px] w-[10px] rounded-bl border-b-2 border-l-2 border-[#c8d3ff]" />
@@ -220,7 +208,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
             </div>
           </div>
 
-          {/* ATS badge */}
           <div className="absolute -bottom-[9px] -right-[46px] z-10 hidden items-center gap-2.5 rounded-2xl border border-white/80 bg-white/95 px-3.5 py-2.5 text-left shadow-[0_12px_30px_rgba(42,65,115,0.10)] sm:flex md:-right-[46px]">
             <span className="flex h-[30px] w-[30px] items-center justify-center rounded-[10px] border border-orange-200 bg-orange-50 text-orange-600">
               <LockKeyhole size={13} strokeWidth={2.2} />
@@ -238,7 +225,6 @@ export default function ResumeUploadSection({ onResumeSelected }) {
 
         {/* Four processing/status cards */}
         <div className="relative mt-7 grid w-full max-w-[804px] grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-          {/* The fine connecting line is intentionally behind the cards */}
           <div aria-hidden="true" className="absolute left-[8%] right-[8%] top-1/2 hidden h-[2px] -translate-y-1/2 bg-gradient-to-r from-emerald-100 via-indigo-100 to-blue-100 lg:block" />
           {statuses.map((status) => {
             const Icon = status.icon;

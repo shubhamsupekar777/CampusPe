@@ -164,7 +164,6 @@ export default function AppShowcaseSection({ onOpenAuth }) {
     <section id="app" className="py-24 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        {/* Section Header matching Figma */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase mb-4">
           <Smartphone className="w-3.5 h-3.5 text-blue-600" />
           <span>Mobile Experience</span>
@@ -178,7 +177,6 @@ export default function AppShowcaseSection({ onOpenAuth }) {
           Access verified campus placements, AI cutoff insights, and 1-click applications right from your fingertips.
         </p>
 
-        {/* 5 Mobile Screens Carousel / Perspective Showcase */}
         <div className="mt-14 relative flex items-center justify-center gap-3 sm:gap-6 overflow-x-auto py-8 px-4 no-scrollbar">
           
           {screens.map((screen, idx) => {
@@ -197,18 +195,14 @@ export default function AppShowcaseSection({ onOpenAuth }) {
                     : 'scale-75 z-0 opacity-40 hover:opacity-60 hidden md:block rounded-[38px]'
                 }`}
               >
-                {/* iPhone Mockup Frame */}
                 <div className="w-[240px] sm:w-[260px] h-[480px] sm:h-[510px] bg-slate-900 rounded-[38px] p-2.5 shadow-xl border-4 border-slate-800 flex flex-col justify-between overflow-hidden relative">
                   
-                  {/* Speaker Notch / Dynamic Island */}
                   <div className="w-20 h-4 bg-slate-950 rounded-full mx-auto mb-2 shrink-0 flex items-center justify-center">
                     <div className="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
                   </div>
 
-                  {/* Screen Inside */}
                   <div className="w-full h-full bg-white rounded-[28px] overflow-hidden flex flex-col justify-between border border-slate-100">
                     
-                    {/* App Topbar */}
                     <div className={`p-3.5 bg-gradient-to-r ${screen.color} text-white text-left`}>
                       <div className="flex items-center justify-between">
                         <span className="text-[10px] font-bold tracking-wider uppercase opacity-80">{screen.category}</span>
@@ -218,12 +212,10 @@ export default function AppShowcaseSection({ onOpenAuth }) {
                       <p className="text-[9px] opacity-80">{screen.subtitle}</p>
                     </div>
 
-                    {/* App Body Content */}
                     <div className="flex-1 overflow-y-auto no-scrollbar bg-slate-50/50">
                       {screen.content}
                     </div>
 
-                    {/* App Bottom Navigation */}
                     <div className="h-11 bg-white border-t border-slate-100 flex items-center justify-around px-2 text-slate-400">
                       <Compass className="w-4 h-4 text-blue-600" />
                       <Briefcase className="w-4 h-4" />
@@ -246,7 +238,6 @@ export default function AppShowcaseSection({ onOpenAuth }) {
 
         </div>
 
-        {/* Carousel Indicator Dots */}
         <div className="flex items-center justify-center gap-2 mt-4">
           {screens.map((_, dotIdx) => (
             <button
@@ -262,10 +253,8 @@ export default function AppShowcaseSection({ onOpenAuth }) {
           ))}
         </div>
 
-        {/* "Download App Here" Section matching Figma bottom banner */}
         <div className="mt-20 max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl">
           
-          {/* Ambient Glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left">
@@ -284,10 +273,8 @@ export default function AppShowcaseSection({ onOpenAuth }) {
                 Join over 150,000+ active students receiving daily placement alerts, cutoff updates, and AI interview prep on their phones.
               </p>
 
-              {/* App Store Buttons */}
               <div className="mt-8 flex flex-wrap gap-4">
                 
-                {/* Google Play Store Badge */}
                 <a 
                   href="#download"
                   onClick={(e) => { e.preventDefault(); onOpenAuth(); }}
@@ -300,7 +287,6 @@ export default function AppShowcaseSection({ onOpenAuth }) {
                   </div>
                 </a>
 
-                {/* Apple App Store Badge */}
                 <a 
                   href="#download"
                   onClick={(e) => { e.preventDefault(); onOpenAuth(); }}
@@ -327,11 +313,9 @@ export default function AppShowcaseSection({ onOpenAuth }) {
               </div>
             </div>
 
-            {/* Isometric Mobile Graphics matching Figma */}
             <div className="md:col-span-5 flex items-center justify-center relative">
               <div className="relative w-64 h-72 flex items-center justify-center">
                 
-                {/* Phone 1 Back */}
                 <div className="absolute w-44 h-64 bg-slate-700/80 rounded-3xl -rotate-12 translate-x-6 border-2 border-slate-600/50 shadow-xl overflow-hidden p-2 flex flex-col justify-between">
                   <div className="w-10 h-2 bg-slate-900 rounded-full mx-auto"></div>
                   <div className="h-44 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-2xl p-2 text-[9px] text-white">
@@ -340,7 +324,6 @@ export default function AppShowcaseSection({ onOpenAuth }) {
                   </div>
                 </div>
 
-                {/* Phone 2 Front */}
                 <div className="absolute w-48 h-68 bg-slate-900 rounded-3xl rotate-6 -translate-x-4 border-2 border-slate-500 shadow-2xl overflow-hidden p-2 flex flex-col justify-between">
                   <div className="w-12 h-2.5 bg-slate-950 rounded-full mx-auto"></div>
                   <div className="h-52 bg-white rounded-2xl p-2.5 text-left text-slate-800">

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { X, Sparkles, Check, ArrowRight, Lock, Mail, User } from 'lucide-react';
 
 export default function AuthModal({ isOpen, onClose }) {
-  const [authMode, setAuthMode] = useState('signup'); // 'signin' or 'signup'
-  const [userRole, setUserRole] = useState('student'); // 'student' or 'recruiter'
+  const [authMode, setAuthMode] = useState('signup'); // 
+  const [userRole, setUserRole] = useState('student'); 
   const [submitted, setSubmitted] = useState(false);
 
   if (!isOpen) return null;
@@ -23,7 +23,6 @@ export default function AuthModal({ isOpen, onClose }) {
         className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-100 p-6 sm:p-8 relative overflow-hidden text-left"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
@@ -61,7 +60,6 @@ export default function AuthModal({ isOpen, onClose }) {
               Join 150,000+ students and 100+ top corporate recruiters.
             </p>
 
-            {/* Role Switcher */}
             <div className="mt-5 p-1 bg-slate-100 rounded-xl flex gap-1 text-xs font-semibold text-slate-600">
               <button
                 type="button"
@@ -83,7 +81,6 @@ export default function AuthModal({ isOpen, onClose }) {
               </button>
             </div>
 
-            {/* Form */}
             <form onSubmit={handleSubmit} className="mt-5 space-y-3.5">
               {authMode === 'signup' && (
                 <div>
@@ -137,7 +134,6 @@ export default function AuthModal({ isOpen, onClose }) {
               </button>
             </form>
 
-            {/* Toggle Mode */}
             <div className="mt-5 text-center text-xs text-slate-500">
               {authMode === 'signup' ? (
                 <span>

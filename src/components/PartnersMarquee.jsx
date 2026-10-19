@@ -35,7 +35,6 @@ const partners = [
 ];
 
 export default function PartnersMarquee() {
-  // Duplicate the partners to create a seamless loop.
   const items = [...partners, ...partners];
 
   return (

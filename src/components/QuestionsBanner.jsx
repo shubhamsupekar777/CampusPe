@@ -6,7 +6,6 @@ export default function QuestionsBanner({ onOpenDemo }) {
     <section id="faq" className="relative isolate w-full overflow-hidden bg-white py-14 sm:py-16 lg:py-20">
       <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[100px]">
         
-        {/* Soft Blue Gradient Card matching Figma */}
         <div className="rounded-[28px] bg-gradient-to-r from-blue-50/80 via-sky-50/60 to-indigo-50/80 border border-blue-200/90 p-8 sm:p-12 text-center shadow-lg shadow-blue-500/5 relative overflow-hidden">
           
           <div className="w-14 h-14 rounded-2xl bg-white border border-blue-100 flex items-center justify-center text-[#078BFA] shadow-md shadow-blue-500/10 mx-auto mb-4">

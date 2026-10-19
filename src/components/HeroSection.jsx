@@ -249,7 +249,6 @@ function AudienceCard({ card, onSelectTab, onOpenAuth, onOpenDemo }) {
 export default function HeroSection({ onSelectTab, onOpenAuth, onOpenDemo }) {
   return (
     <section id="home" className="relative isolate overflow-hidden bg-white">
-      {/* Soft ambient colour washes from the reference design */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/2 top-10 h-[430px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-r from-sky-100/50 via-white to-indigo-100/60 blur-3xl" />
         <div className="absolute -left-32 top-56 h-96 w-96 rounded-full bg-cyan-100/30 blur-3xl" />
@@ -257,7 +256,6 @@ export default function HeroSection({ onSelectTab, onOpenAuth, onOpenDemo }) {
       </div>
 
       <div className="relative mx-auto max-w-[1440px] px-5 pb-12 pt-8 sm:px-8 sm:pb-14 sm:pt-9 lg:px-12">
-        {/* Floating notices sit outside the headline's text area, as in the reference */}
         <FloatingNotice
           type="whatsapp"
           className="left-6 top-8 hidden text-left xl:block 2xl:left-10"
@@ -267,7 +265,6 @@ export default function HeroSection({ onSelectTab, onOpenAuth, onOpenDemo }) {
           className="right-6 top-7 hidden text-left xl:block 2xl:right-10"
         />
 
-        {/* Hero headline */}
         <div className="relative mx-auto max-w-5xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-orange-50/80 px-5 py-2.5 text-sm font-semibold text-blue-600">
             <Bot className="h-5 w-5 fill-blue-500 text-blue-500" />
@@ -286,7 +283,6 @@ export default function HeroSection({ onSelectTab, onOpenAuth, onOpenDemo }) {
           </p>
         </div>
 
-        {/* The title and activity cards share one row on desktop, matching the reference */}
         <div className="mx-auto mt-6 grid max-w-[1370px] grid-cols-1 items-center gap-4 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-5">
           <SocialProof className="mx-auto w-fit max-w-full md:mx-0" />
 
@@ -301,7 +297,6 @@ export default function HeroSection({ onSelectTab, onOpenAuth, onOpenDemo }) {
           <RecruiterProof className="mx-auto w-fit max-w-full md:ml-auto md:mr-0" />
         </div>
 
-        {/* Main audience cards: brought up so all three cards and CTAs are visible sooner */}
         <div className="mx-auto mt-6 grid max-w-[1370px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-7">
           {audienceCards.map((card) => (
             <AudienceCard
@@ -314,7 +309,6 @@ export default function HeroSection({ onSelectTab, onOpenAuth, onOpenDemo }) {
           ))}
         </div>
 
-        {/* 4 Stats Metrics Bar matching Figma */}
         <div className="mx-auto mt-12 max-w-[1370px] border-t border-slate-100 pt-8 sm:mt-14 sm:pt-10">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
             <div className="rounded-2xl border border-blue-100/80 bg-blue-50/30 p-4 text-center sm:p-5">

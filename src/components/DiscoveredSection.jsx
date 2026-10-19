@@ -84,24 +84,19 @@ export default function DiscoveredSection({ onOpenAuth }) {
   return (
     <section id="colleges" className="relative isolate w-full overflow-hidden bg-white py-14 sm:py-16 lg:py-20">
       
-      {/* Soft ambient background glows */}
       <div className="pointer-events-none absolute -left-40 top-1/4 -z-10 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-1/4 -z-10 h-80 w-80 rounded-full bg-sky-100/40 blur-3xl" />
 
-      {/* Main container matching MatchedSection: 1440px with responsive desktop padding */}
       <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[100px]">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-8">
           
-          {/* LEFT: Intro copy matching Figma */}
           <div className="min-w-0 text-left lg:col-span-5">
             
-            {/* Section label */}
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-white/90 px-3.5 py-2 text-[11px] font-semibold uppercase tracking-wide text-sky-500 shadow-sm sm:text-xs">
               <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.65)]" />
               02 • Dual Ecosystem
             </div>
 
-            {/* Main heading */}
             <h2 className="font-heading text-[38px] font-extrabold leading-[1.12] tracking-tight text-neutral-700 sm:text-5xl lg:text-[36px] xl:text-[42px]">
               Get Discovered
               <br />
@@ -110,12 +105,10 @@ export default function DiscoveredSection({ onOpenAuth }) {
               </span>
             </h2>
 
-            {/* Description */}
             <p className="mt-5 max-w-[440px] text-[15px] leading-[1.45] text-slate-500 sm:text-base">
               A single platform bridging the gap between student talent, higher-education institutions, and corporate hiring teams — creating higher placement success for every stakeholder.
             </p>
 
-            {/* Feature bullets */}
             <div className="mt-7 space-y-3">
               <div className="flex items-center gap-3 rounded-xl border border-slate-200/80 bg-white/90 p-3.5 shadow-[0_2px_8px_rgba(15,23,42,0.025)]">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
@@ -145,7 +138,6 @@ export default function DiscoveredSection({ onOpenAuth }) {
               </div>
             </div>
 
-            {/* CTA button */}
             <div className="mt-8">
               <button
                 type="button"
@@ -159,10 +151,8 @@ export default function DiscoveredSection({ onOpenAuth }) {
 
           </div>
 
-          {/* RIGHT: Ecosystem Cards Grid (matching Figma design cards) */}
           <div className="relative mx-auto w-full max-w-[650px] min-w-0 lg:col-span-7 lg:justify-self-end">
             
-            {/* Ambient card glow */}
             <div className="pointer-events-none absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-blue-200/40 via-sky-100/20 to-purple-200/30 blur-2xl" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -174,7 +164,6 @@ export default function DiscoveredSection({ onOpenAuth }) {
                     className="group rounded-[20px] border border-slate-200/90 bg-white p-5 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg text-left flex flex-col justify-between"
                   >
                     <div>
-                      {/* Top icon and badge */}
                       <div className="flex items-center justify-between mb-4">
                         <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${card.iconBg} shadow-xs transition-transform group-hover:scale-105`}>
                           <Icon className="h-5 w-5" />
@@ -184,17 +173,14 @@ export default function DiscoveredSection({ onOpenAuth }) {
                         </span>
                       </div>
 
-                      {/* Title */}
                       <h3 className="font-heading text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                         {card.role}
                       </h3>
 
-                      {/* Description */}
                       <p className="mt-2 text-xs leading-relaxed text-slate-500">
                         {card.description}
                       </p>
 
-                      {/* Mini features */}
                       <ul className="mt-4 space-y-1.5 border-t border-slate-100 pt-3 text-[11px] text-slate-600">
                         {card.features.map((f, fIdx) => (
                           <li key={fIdx} className="flex items-center gap-1.5">
@@ -205,7 +191,6 @@ export default function DiscoveredSection({ onOpenAuth }) {
                       </ul>
                     </div>
 
-                    {/* Action button */}
                     <div className="mt-5 pt-3">
                       <button
                         type="button"

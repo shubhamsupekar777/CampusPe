@@ -159,16 +159,13 @@ export default function MatchedSection({ onOpenAuth }) {
       <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[100px]">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-8">
 
-          {/* LEFT: Opportunity discovery introduction */}
           <div className="min-w-0 text-left lg:col-span-5">
 
-            {/* Section label */}
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-white/90 px-3.5 py-2 text-[11px] font-semibold uppercase tracking-wide text-sky-500 shadow-sm sm:text-xs">
               <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.65)]" />
               01 • Opportunity Discovery
             </div>
 
-            {/* Main heading */}
             <h2 className="font-heading text-[38px] font-extrabold leading-[1.12] tracking-tight text-neutral-700 sm:text-5xl lg:text-[36px] xl:text-[42px]">
               Stop searching.
               <br />
@@ -197,7 +194,6 @@ export default function MatchedSection({ onOpenAuth }) {
                   >
                     <div className="flex items-start gap-3">
 
-                      {/* Step number */}
                       <div
                         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${step.iconBg} ${step.iconColor}`}
                       >
@@ -206,7 +202,6 @@ export default function MatchedSection({ onOpenAuth }) {
                         </span>
                       </div>
 
-                      {/* Benefit content */}
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-wrap items-start justify-between gap-x-2 gap-y-1">
                           <h3 className="font-heading text-[13px] font-bold leading-5 text-slate-900 sm:text-sm">
@@ -230,7 +225,6 @@ export default function MatchedSection({ onOpenAuth }) {
               })}
             </div>
 
-            {/* Explore opportunities CTA */}
             <div className="mt-7">
               <button
                 type="button"
@@ -243,16 +237,12 @@ export default function MatchedSection({ onOpenAuth }) {
             </div>
           </div>
 
-          {/* RIGHT: Compact CampusPe opportunity feed */}
           <div className="relative mx-auto w-full max-w-[650px] min-w-0 lg:col-span-7 lg:justify-self-end">
 
-            {/* Ambient card glow */}
             <div className="pointer-events-none absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-blue-200/50 via-sky-100/30 to-purple-200/40 blur-2xl" />
 
-            {/* Feed container */}
             <div className="rounded-[22px] border border-slate-200/90 bg-white/95 p-4 shadow-[0_18px_45px_rgba(15,23,42,0.12)] sm:p-5 lg:p-5">
 
-              {/* Feed heading and match count */}
               <div className="flex flex-col gap-3 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex min-w-0 items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#078BFA] text-white shadow-sm shadow-blue-500/20">
@@ -276,7 +266,6 @@ export default function MatchedSection({ onOpenAuth }) {
                 </span>
               </div>
 
-              {/* Category filter pills */}
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {filters.map((filter, index) => (
                   <span
@@ -292,7 +281,6 @@ export default function MatchedSection({ onOpenAuth }) {
                 ))}
               </div>
 
-              {/* Opportunity cards */}
               <div className="mt-4 space-y-3">
                 {opportunities.map((item) => (
                   <article
@@ -301,13 +289,11 @@ export default function MatchedSection({ onOpenAuth }) {
                   >
                     <div className="flex items-start gap-3">
 
-                      {/* Company logo */}
                       <CompanyLogo
                         company={item.company}
                         logo={item.logo}
                       />
 
-                      {/* Opportunity information */}
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                           <h4 className="font-heading text-[13px] font-bold leading-5 text-slate-900 transition-colors group-hover:text-blue-600 sm:text-sm">
@@ -326,7 +312,6 @@ export default function MatchedSection({ onOpenAuth }) {
                           {item.role}
                         </p>
 
-                        {/* Location, work mode and compensation */}
                         <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[10px] text-slate-500 sm:gap-x-3 sm:text-[11px]">
                           <span className="inline-flex items-center gap-1">
                             {item.id === 1 ? (
@@ -353,12 +338,10 @@ export default function MatchedSection({ onOpenAuth }) {
                           </span>
                         </div>
 
-                        {/* Short description */}
                         <p className="mt-2 line-clamp-1 text-[10px] leading-relaxed text-slate-500 sm:text-[11px]">
                           {item.description}
                         </p>
 
-                        {/* Mobile action button */}
                         <button
                           type="button"
                           onClick={handleOpportunityClick}
@@ -369,7 +352,6 @@ export default function MatchedSection({ onOpenAuth }) {
                         </button>
                       </div>
 
-                      {/* Desktop action button */}
                       <button
                         type="button"
                         onClick={handleOpportunityClick}
@@ -382,7 +364,6 @@ export default function MatchedSection({ onOpenAuth }) {
                 ))}
               </div>
 
-              {/* Feed footer */}
               <div className="mt-4 flex flex-col gap-2 border-t border-slate-100 pt-4 sm:flex-row sm:items-center sm:justify-between">
                 <button
                   type="button"
@@ -401,10 +382,8 @@ export default function MatchedSection({ onOpenAuth }) {
               </div>
             </div>
 
-            {/* Bottom decorative note: curved arrow + two-line text */}
             <div className="mx-auto mt-4 flex max-w-[360px] items-start justify-center gap-3 sm:mt-5 sm:translate-x-4">
 
-              {/* Hand-drawn curved arrow */}
               <svg
                 viewBox="0 0 42 32"
                 fill="none"
@@ -427,7 +406,6 @@ export default function MatchedSection({ onOpenAuth }) {
                 />
               </svg>
 
-              {/* Keep the note on exactly two lines on desktop */}
               <p className="font-heading text-sm font-medium italic leading-[1.65] text-indigo-600 sm:text-[14px]">
                 A mix of colleges, jobs,
                 <br />

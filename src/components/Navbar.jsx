@@ -24,7 +24,6 @@ export default function Navbar({ onOpenAuth, onOpenDemo }) {
       <div className="mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-[7%]">
         <div className="flex min-h-[76px] items-center justify-between gap-5 py-2 md:min-h-[88px] md:py-0">
 
-          {/* Brand: uses the real logo when the image path is valid, with a graceful fallback */}
           <a
             href="/"
             aria-label="CampusPe Home"
@@ -52,7 +51,6 @@ export default function Navbar({ onOpenAuth, onOpenDemo }) {
             )}
           </a>
 
-          {/* Desktop links */}
           <nav
             aria-label="Main navigation"
             className="hidden flex-1 items-center justify-center gap-8 lg:flex xl:gap-[4.2rem]"
@@ -68,7 +66,6 @@ export default function Navbar({ onOpenAuth, onOpenDemo }) {
             ))}
           </nav>
 
-          {/* Desktop authentication actions */}
           <div className="hidden shrink-0 items-center gap-5 sm:flex lg:gap-7">
             <button
               type="button"
@@ -86,7 +83,6 @@ export default function Navbar({ onOpenAuth, onOpenDemo }) {
             </button>
           </div>
 
-          {/* Mobile menu toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen((open) => !open)}
@@ -103,7 +99,6 @@ export default function Navbar({ onOpenAuth, onOpenDemo }) {
         </div>
       </div>
 
-      {/* Mobile navigation */}
       {mobileMenuOpen && (
         <div className="border-t border-slate-100 bg-white px-5 pb-5 pt-3 shadow-lg lg:hidden">
           <nav
