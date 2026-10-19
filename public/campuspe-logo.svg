@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="cpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066cc" />
+      <stop offset="100%" stop-color="#0080ff" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Symbol: Graduation Cap + Forward Spark -->
+  <g transform="translate(10, 10)">
+    <rect width="40" height="40" rx="12" fill="url(#cpGrad)" />
+    <!-- Graduation Cap Icon -->
+    <path d="M20 14L8 20L20 26L32 20L20 14Z" fill="white" />
+    <path d="M12 22.5V28C12 30.5 15.5 32.5 20 32.5C24.5 32.5 28 30.5 28 28V22.5" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" />
+    <!-- Tassel -->
+    <path d="M30 21V27L32 28" stroke="#7dd3fc" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography: CampusPe -->
+  <text x="60" y="38" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="800" font-size="28" letter-spacing="-0.5" fill="#0f172a">
+    Campus<tspan fill="#078BFA">Pe</tspan>
+  </text>
+  
+  <!-- Sub-tagline -->
+  <text x="62" y="49" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.2" fill="#64748b">
+    AI CAMPUS NETWORK
+  </text>
+</svg>
