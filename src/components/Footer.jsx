@@ -1,6 +1,4 @@
 
-
-
 import React, { useState } from 'react';
 import { ArrowRight, Mail, Phone } from 'lucide-react';
 
@@ -102,7 +100,7 @@ function CampusPeLogo() {
     <a
       href="/"
       aria-label="CampusPe home"
-      className="inline-flex min-h-[56px] items-center"
+      className="inline-flex min-h-[48px] items-center"
     >
       {!showFallback ? (
         <img
@@ -155,63 +153,84 @@ function SocialLink({ item }) {
 export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-[#fffdfb] text-[#34445d]">
+      {/* Soft blue background glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[58%] bg-[radial-gradient(ellipse_at_50%_100%,rgba(68,153,245,0.42)_0%,rgba(190,220,250,0.28)_42%,rgba(255,253,251,0)_78%)]"
       />
 
-      <div className="mx-auto max-w-[1360px] px-5 pb-6 pt-8 sm:px-8 lg:px-12">
-        {/* Call to action */}
-        <section className="mb-10 flex flex-col gap-6 rounded-[24px] border border-[#d8d8d8] bg-white/90 px-6 py-7 shadow-[0_12px_35px_rgba(15,23,42,0.04)] sm:px-10 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto max-w-[1360px] px-5 pb-4 sm:px-8 lg:px-12">
+        {/* Footer CTA */}
+        <section className="mb-5 flex flex-col gap-5 rounded-[22px] border border-[#d8d8d8] bg-white/90 px-5 py-6 shadow-[0_12px_35px_rgba(15,23,42,0.04)] sm:px-8 sm:py-7 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <div className="max-w-[390px]">
-            <h2 className="text-[25px] font-bold leading-tight tracking-[-0.03em] text-[#14213d] sm:text-[27px]">
+            <h2 className="text-[22px] font-bold leading-tight tracking-[-0.03em] text-[#14213d] sm:text-[25px]">
               Ready for what’s next?
             </h2>
-            <p className="mt-2 text-[14px] leading-[1.35] text-[#526783]">
+
+            <p className="mt-2 text-[13px] leading-[1.4] text-[#526783] sm:text-[14px]">
               Discover colleges, find opportunities, list your institution, or
               start hiring with CampusPe.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-2.5">
-            <a href="#colleges" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#0787f9] px-4 py-2.5 text-[12px] font-semibold text-white shadow-sm transition hover:bg-[#006fe0]">
+            <a
+              href="#colleges"
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#0787f9] px-4 py-2.5 text-[12px] font-semibold text-white shadow-sm transition hover:bg-[#006fe0]"
+            >
               Explore Colleges <ArrowRight className="h-3.5 w-3.5" />
             </a>
-            <a href="#students" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#0787f9] px-4 py-2.5 text-[12px] font-semibold text-white shadow-sm transition hover:bg-[#006fe0]">
+
+            <a
+              href="#students"
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#0787f9] px-4 py-2.5 text-[12px] font-semibold text-white shadow-sm transition hover:bg-[#006fe0]"
+            >
               Find Opportunities <ArrowRight className="h-3.5 w-3.5" />
             </a>
-            <a href="#colleges" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#d1dbea] bg-white px-4 py-2.5 text-[12px] font-semibold text-[#24324a] transition hover:border-[#0787f9] hover:text-[#0787f9]">
+
+            <a
+              href="#colleges"
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#d1dbea] bg-white px-4 py-2.5 text-[12px] font-semibold text-[#24324a] transition hover:border-[#0787f9] hover:text-[#0787f9]"
+            >
               List Your College <ArrowRight className="h-3.5 w-3.5" />
             </a>
-            <a href="#recruiters" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#d1dbea] bg-white px-4 py-2.5 text-[12px] font-semibold text-[#24324a] transition hover:border-[#0787f9] hover:text-[#0787f9]">
+
+            <a
+              href="#recruiters"
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#d1dbea] bg-white px-4 py-2.5 text-[12px] font-semibold text-[#24324a] transition hover:border-[#0787f9] hover:text-[#0787f9]"
+            >
               Post a Job <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
         </section>
 
-        <div className="grid grid-cols-2 gap-x-7 gap-y-9 pb-10 sm:grid-cols-3 lg:grid-cols-[1.75fr_0.8fr_0.8fr_0.9fr_0.7fr_1.15fr] lg:gap-x-8">
+        {/* Footer columns */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-7 pb-6 sm:grid-cols-3 lg:grid-cols-[1.75fr_0.8fr_0.8fr_0.9fr_0.7fr_1.15fr] lg:gap-x-7">
+          {/* Brand */}
           <div className="col-span-2 sm:col-span-1">
             <CampusPeLogo />
 
-            <p className="mt-5 max-w-[285px] text-[17px] leading-[1.45] text-[#444]">
+            <p className="mt-3 max-w-[285px] text-[16px] leading-[1.45] text-[#444] sm:text-[17px]">
               From choosing a college to finding your next opportunity.
             </p>
-            <p className="mt-4 max-w-[285px] text-[17px] leading-[1.45] text-[#444]">
+
+            <p className="mt-3 max-w-[285px] text-[16px] leading-[1.45] text-[#444] sm:text-[17px]">
               CampusPe connects students, colleges and employers in one place.
             </p>
           </div>
 
+          {/* Link groups */}
           {groups.map((group) => (
             <nav
               key={group.title}
               aria-label={group.title}
               className="min-w-0"
             >
-              <h3 className="mb-3 text-[16px] font-bold leading-tight text-[#242a33] sm:text-[17px]">
+              <h3 className="mb-3 text-[15px] font-bold leading-tight text-[#242a33] sm:text-[17px]">
                 {group.title}
               </h3>
 
-              <ul className="space-y-[9px]">
+              <ul className="space-y-2">
                 {group.links.map(([label, href]) => (
                   <li key={label}>
                     <a
@@ -236,7 +255,7 @@ export default function Footer() {
               </ul>
 
               {group.title === 'Legal & Policies' && (
-                <div className="mt-6 max-w-[180px] rounded-xl border border-[#a9e7ff] bg-[#f0f8ff]/95 p-3 text-[12px] leading-[1.55] text-[#40516a]">
+                <div className="mt-4 max-w-[180px] rounded-xl border border-[#a9e7ff] bg-[#f0f8ff]/95 p-3 text-[12px] leading-[1.55] text-[#40516a]">
                   Separate user, institution and employer terms can live inside
                   the full Policies page.
                 </div>
@@ -245,7 +264,8 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 border-y border-[#26364b]/60 py-5 text-[12px] text-[#46566c] sm:flex-row sm:items-center sm:justify-between">
+        {/* Contact details */}
+        <div className="flex flex-col gap-4 border-y border-[#26364b]/60 py-4 text-[12px] text-[#46566c] sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href="mailto:contactus@campuspe.com"
@@ -274,8 +294,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[14px] leading-6 text-[#073b78] sm:text-[17px]">
+        {/* Copyright and social links */}
+        <div className="flex flex-col gap-3 pt-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[13px] leading-6 text-[#073b78] sm:text-[16px]">
             © 2026 CampusPe Technologies Pvt. Ltd.{' '}
             <a href="/privacy-policy" className="hover:text-[#0787f9]">
               Privacy

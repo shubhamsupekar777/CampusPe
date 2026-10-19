@@ -1,55 +1,52 @@
+
 import React from 'react';
-import { MessageSquare, PhoneCall, Sparkles, ArrowRight, HelpCircle } from 'lucide-react';
+import { ArrowUpRight, PhoneCall } from 'lucide-react';
 
 export default function QuestionsBanner({ onOpenDemo }) {
   return (
-    <section id="faq" className="relative isolate w-full overflow-hidden bg-white py-14 sm:py-16 lg:py-20">
-      <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[100px]">
-        
-        <div className="rounded-[28px] bg-gradient-to-r from-blue-50/80 via-sky-50/60 to-indigo-50/80 border border-blue-200/90 p-8 sm:p-12 text-center shadow-lg shadow-blue-500/5 relative overflow-hidden">
-          
-          <div className="w-14 h-14 rounded-2xl bg-white border border-blue-100 flex items-center justify-center text-[#078BFA] shadow-md shadow-blue-500/10 mx-auto mb-4">
-            <HelpCircle className="w-7 h-7" />
-          </div>
+    <section
+      id="faq"
+      className="relative w-full bg-white px-5 pt-10 pb-8 sm:px-8 sm:pt-12 sm:pb-10 lg:pt-12 lg:pb-10"
+    >
+      <div className="mx-auto w-full max-w-[1440px] lg:px-[36px]">
+        <div className="relative flex min-h-[210px] flex-col items-center justify-center overflow-hidden rounded-[20px] bg-gradient-to-br from-[#eaf4ff] via-white to-[#f5f0ff] px-5 py-9 text-center shadow-[0_12px_30px_rgba(105,125,255,0.10)] sm:rounded-[22px] sm:px-10 sm:py-10">
 
-          <h3 className="font-heading text-2xl sm:text-4xl font-extrabold text-neutral-800 tracking-tight">
+          <h3 className="font-heading text-[23px] font-bold leading-tight tracking-tight text-[#202833] sm:text-[25px]">
             Still have questions?
           </h3>
 
-          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Need guidance on cutoff predictions, corporate placement drives, or institutional onboarding? Our experts are available 24/7.
+          <p className="mt-3 max-w-[360px] text-[13px] leading-[1.5] text-[#475569] sm:text-[14px]">
+            Our support team is here to help you succeed. Get in
+            touch anytime.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+
+            {/* Contact Support */}
+            <a
+              href="mailto:contactus@campuspe.com"
+              className="group inline-flex h-[34px] items-center gap-3 rounded-full bg-[#078BFA] py-1 pl-4 pr-1 text-[11px] font-semibold text-white transition-all duration-200 hover:bg-[#006fe0] hover:shadow-md sm:h-[36px] sm:text-[12px]"
+            >
+              <span>Contact Support</span>
+              <span className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-white text-[#078BFA] transition-transform group-hover:translate-x-0.5">
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </a>
+
+            {/* Schedule a Call */}
             <button
               type="button"
               onClick={onOpenDemo}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#078BFA] px-7 py-3.5 text-xs font-bold text-white shadow-md shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 hover:shadow-lg sm:text-sm cursor-pointer"
+              className="group inline-flex h-[34px] items-center gap-3 rounded-full border border-[#078BFA] bg-white py-1 pl-4 pr-1 text-[11px] font-semibold text-[#078BFA] transition-all duration-200 hover:bg-blue-50 sm:h-[36px] sm:text-[12px]"
             >
-              <PhoneCall className="w-4 h-4" />
-              <span>Talk to Counselor</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Schedule a Call</span>
+              <span className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[#078BFA] text-white transition-transform group-hover:scale-105">
+                <PhoneCall className="h-3.5 w-3.5" />
+              </span>
             </button>
 
-            <a
-              href="https://wa.me/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-7 py-3.5 text-xs font-bold text-white shadow-md shadow-emerald-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-lg sm:text-sm cursor-pointer"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>WhatsApp Support</span>
-            </a>
-
           </div>
-
-          <p className="mt-6 text-xs text-slate-500">
-            Average response time: <strong>under 5 minutes</strong> • 100% Free Consultation
-          </p>
-
         </div>
-
       </div>
     </section>
   );

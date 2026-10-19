@@ -4,7 +4,7 @@ import { ArrowRight, GraduationCap, Building2, Briefcase } from 'lucide-react';
 export default function PreFooterCta({ onOpenAuth, onOpenDemo }) {
   return (
     <section className="border-t border-slate-200/80 bg-slate-50/70 py-12 sm:py-14">
-      <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[100px]">
+      {/* <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[100px]">
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
           
@@ -53,7 +53,7 @@ export default function PreFooterCta({ onOpenAuth, onOpenDemo }) {
 
         </div>
 
-      </div>
+      </div> */}
     </section>
   );
 }
